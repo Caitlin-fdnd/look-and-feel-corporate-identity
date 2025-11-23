@@ -8,7 +8,7 @@ box-sizing: border-box;
 header {
 
     background-image: url(assets/Header-bg2.png);
-    background-size: auto 100%;
+    background-size: 30% 100%;
     background-repeat: repeat-x;
     border: solid var(--paarsBlauw) 0.4em;
     border-radius: 1.5em;   
@@ -33,47 +33,70 @@ header {
 
 .logo-img {
  height: 6em;   
+ cursor: pointer;
 }
 
 .dropdown-img {
+    height: 8em;
+    float: right;
+    margin-top: -8em; 
+    margin-right: 1em;
+    transition: all .6s ease;
 
- height: 8em;
- float: right;
- margin-top: -8em; 
- margin-right: 1em;
- transition: all .6s ease; 
-
- &:hover, &:active {
-    rotate: 360deg;
-    filter:brightness(1.2);
- }
+    &:hover, &:active {
+        rotate: 360deg;
+        filter: brightness(1.2);
+    }
 }
 
-.dropdown-menu a {
-display: block;
-color: var(--secondaryAccent);
-padding: 10px 15px;
-text-decoration: none;
-overflow: hidden;
-transition: all .6s ease; 
+.dropdown-menu {
+    position: relative;
 
-    &:hover {
-    transition: all .2s ease;  
-    filter:brightness(1.4)
+    /* Linkjes in dropdown */
+    a {
+        display: block;
+        color: var(--secondaryAccent);
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: all .3s ease;
+        
+
+        &:hover, &:active {
+            transform: translateX(5px);
+            color: var(--zee);
+            font-weight: var(--font-weight-semibold);
+        }
+    }
+
+    /* Hover op img opent dropdown */
+    &:hover .dropdown-items {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
     }
 }
 
 .dropdown-items {
-display: none;
-background-color: var(--luchtBlauw);
-position: absolute;
-min-width: 100px;
-box-shadow: 2px 2px 5px rgb(124, 119, 119);
-margin: -1em auto 0 68.8em ;
-transition: all .5s ease;
-}
+    position: absolute;
+    top: 100%;          
+    right: 0;           
+    min-width: 140px;
+    margin-top: 0.5em;
 
-.dropdown-menu:hover .dropdown-items{
-display: block;
-transform: translateY(0);
+    opacity: 0;
+    transform: translateY(-15px);  
+    pointer-events: none;
+
+    background-color: var(--luchtBlauw);
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    border-radius: 8px;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+    
+    padding: 6px 0;
+
+    border: solid var(--paarsBlauw) 0.2em;
+    border-radius: 1.2em; 
 }
