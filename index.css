@@ -5,6 +5,10 @@ line-height: 140%;
 box-sizing: border-box;
 }
 
+body {
+    background-color: #F2F2F2;
+}
+
 header {
 
     background-image: url(assets/Header-bg2.png);
@@ -27,7 +31,6 @@ header {
 }
 
 .label-search {
-
   margin-left: 0.8em;
 }
 
@@ -65,9 +68,9 @@ header {
             transform: translateX(5px);
             color: var(--zee);
             font-weight: var(--font-weight-semibold);
+            pointer-events: auto;
         }
     }
-    
 
     /* Hover op img opent dropdown */
     &:hover .dropdown-items, &:focus .dropdown-items {
@@ -100,6 +103,14 @@ header {
 
     border: solid var(--paarsBlauw) 0.2em;
     border-radius: 1.2em; 
+}
+
+.article-img {
+  width: 210px;
+  height: 130px;
+  border: 1px solid black;
+  margin: 10px 0;
+  margin-bottom: 0px;
 }
 
 footer {
