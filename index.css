@@ -43,7 +43,7 @@ header {
     margin-right: 1em;
     transition: all .6s ease;
 
-    &:hover, &:active {
+    &:hover, &:active, &:focus {
         rotate: 360deg;
         filter: brightness(1.2);
     }
@@ -61,15 +61,16 @@ header {
         transition: all .3s ease;
         
 
-        &:hover, &:active {
+        &:hover, &:active, &:focus {
             transform: translateX(5px);
             color: var(--zee);
             font-weight: var(--font-weight-semibold);
         }
     }
+    
 
     /* Hover op img opent dropdown */
-    &:hover .dropdown-items {
+    &:hover .dropdown-items, &:focus .dropdown-items {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
@@ -81,7 +82,7 @@ header {
     top: 100%;          
     right: 0;           
     min-width: 140px;
-    margin-top: 0.5em;
+    margin-top: 0.3em;
 
     opacity: 0;
     transform: translateY(-15px);  
@@ -99,4 +100,34 @@ header {
 
     border: solid var(--paarsBlauw) 0.2em;
     border-radius: 1.2em; 
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  margin-bottom: -100px;
+  margin-top: 100px;
+}
+
+footer img {
+
+ width: 100%;
+ height: auto; 
+}
+
+footer a {
+    position: absolute;
+  top: 84%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #69604F;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px rgb(69, 68, 68);
+
 }
