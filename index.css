@@ -18,6 +18,7 @@ header {
     border-radius: 1.5em;   
     position: relative;
     margin: 0.5em;
+    box-shadow: 0 0.3em 0.3em var(--steenGrijs);
     animation: backgroundMove 35s linear infinite;
 }
 
@@ -97,8 +98,8 @@ padding-left: 1.6em;
     pointer-events: none;
 
     background-color: var(--luchtBlauw);
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-    border-radius: 8px;
+    box-shadow: 0 0.2em 0.3em var(--secondaryAccent);
+    border-radius: 1em;
 
     transition:
         opacity .25s ease,
