@@ -7,6 +7,11 @@
 
 body {
     background-color: #F2F2F2;
+    background-image: url("assets/Compact_Blurple.png");
+        background-size: 10em auto;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: fixed;
 }
 
 header {
@@ -146,9 +151,9 @@ header {
     color: var(--primaryAccent);
     background-color: var(--paarsBlauw);
     background-image: url("assets/Buurtcampus\ 79.png");
-    background-size: 5em auto;
+    background-size: 5rem auto;
     background-repeat: no-repeat;
-    background-position: 28em center;
+    background-position: left 28em center;
     background-position-y: 1em;
     border: solid hsl(240, 37%, 14%) 0.2em;
     border-radius: 1em;
