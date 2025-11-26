@@ -59,7 +59,7 @@ header {
     min-height: 3em;
     float: right;
     margin-top: -6em;
-    margin-right: 1em;
+    margin-right: 0.2em;
     transition: all .6s ease;
 
     &:hover,
@@ -112,7 +112,7 @@ header {
 .dropdown-items {
     position: absolute;
     top: 100%;
-    right: 0.6em;
+    right: 0.em;
     min-width: 140px;
     margin-top: 0.3em;
 
