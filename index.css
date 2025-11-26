@@ -224,6 +224,15 @@ header {
     margin-bottom: 0px;
 }
 
+.tower {
+    position: fixed;    
+    bottom: 0;          
+    right: 0;           
+    width: 100px;       
+    height: auto;       
+    z-index: 1000;      
+}
+
 footer {
     position: relative;
     margin-top: 8em;
