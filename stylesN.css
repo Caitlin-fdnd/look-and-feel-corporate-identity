@@ -241,9 +241,9 @@ header {
 
 .tower {
     position: fixed;
-    bottom: 0;
-    right: 0;
-    width: 100px;
+    bottom: -3em;
+    right: -5em;
+    width: 300px;
     height: auto;
     z-index: 1000;
 }
