@@ -20,7 +20,7 @@ header {
     margin: 0.5em;
     box-shadow: 0 0.3em 0.3em var(--steenGrijs);
     animation: backgroundMove 35s linear infinite;
-    height:max-content;
+    height: max-content;
 }
 
 @keyframes backgroundMove {
@@ -38,9 +38,15 @@ header {
 }
 
 .logo-img {
-    max-height: 6em;
-    min-height: 3em;
+    max-height: 4em;
+    min-height: 1em;
     cursor: pointer;
+
+    @media only screen and (min-width: 930px) {
+        max-height: 6em;
+        min-height: 3em;
+        cursor: pointer;
+    }
 }
 
 .label-search-input {
@@ -49,10 +55,10 @@ header {
 }
 
 .dropdown-img {
-    max-height: 8em;
-    min-height: 5em;
+    max-height: 6em;
+    min-height: 3em;
     float: right;
-    margin-top: -8em;
+    margin-top: -6em;
     margin-right: 1em;
     transition: all .6s ease;
 
@@ -61,6 +67,13 @@ header {
     &:focus {
         rotate: 360deg;
         filter: brightness(1.2);
+    }
+
+    @media only screen and (min-width: 930px) {
+        max-height: 8em;
+        min-height: 5em;
+        margin-top: -8em;
+        cursor: pointer;
     }
 }
 
@@ -77,18 +90,19 @@ header {
 
 
         &:hover,
-        &:active {
+        &:active,
+        &:focus {
             transform: translateX(5px);
             color: var(--zee);
             font-weight: var(--font-weight-semibold);
             pointer-events: auto;
             opacity: 1;
+            outline: none;
         }
     }
 
     /* Hover op img opent dropdown */
-    &:hover .dropdown-items,
-    &:focus .dropdown-items {
+    &:hover .dropdown-items {
         opacity: 1;
         transform: translateY(0);
         pointer-events: auto;
@@ -156,7 +170,7 @@ header {
     }
 
     a {
-        padding: 0.15em;
+        padding: 0.3em;
     }
 
     p {
@@ -226,12 +240,12 @@ header {
 }
 
 .tower {
-    position: fixed;    
-    bottom: 0;          
-    right: 0;           
-    width: 100px;       
-    height: auto;       
-    z-index: 1000;      
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100px;
+    height: auto;
+    z-index: 1000;
 }
 
 footer {
@@ -249,9 +263,9 @@ footer {
         position: absolute;
         top: 84%;
         left: 50%;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -53%);
         padding: 0.9em 1.8em;
         cursor: pointer;
-        box-shadow: 2px 2px 4px rgb(69, 68, 68);
+        box-shadow: 2px 2px 4px var(--modder);
     }
 }
