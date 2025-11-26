@@ -112,7 +112,7 @@ header {
 .dropdown-items {
     position: absolute;
     top: 100%;
-    right: 0.em;
+    right: -0.3em;
     min-width: 140px;
     margin-top: 0.3em;
 
@@ -145,6 +145,11 @@ header {
     font-style: italic;
     color: var(--primaryAccent);
     background-color: var(--paarsBlauw);
+    background-image: url("assets/Buurtcampus\ 79.png");
+    background-size: 5em auto;
+    background-repeat: no-repeat;
+    background-position: 28em center;
+    background-position-y: 1em;
     border: solid hsl(240, 37%, 14%) 0.2em;
     border-radius: 1em;
     margin: 0.9em;
