@@ -21,123 +21,122 @@ header {
     box-shadow: 0 0.3em 0.3em var(--steenGrijs);
     animation: backgroundMove 35s linear infinite;
     height: max-content;
+}
 
-
-    @keyframes backgroundMove {
-        0% {
-            background-position: 0 0;
-        }
-
-        100% {
-            background-position: 100% 0;
-        }
+@keyframes backgroundMove {
+    0% {
+        background-position: 0 0;
     }
 
-    .label-search {
-        margin-left: 0.8em;
+    100% {
+        background-position: 100% 0;
     }
+}
 
-    .logo-img {
-        max-height: 4em;
-        min-height: 1em;
-        cursor: pointer;
+.label-search {
+    margin-left: 0.8em;
+}
 
-        @media only screen and (min-width: 930px) {
-            max-height: 6em;
-            min-height: 3em;
-            cursor: pointer;
-        }
-    }
+.logo-img {
+    max-height: 4em;
+    min-height: 1em;
+    cursor: pointer;
 
-    .label-search-input {
-        padding-left: 1.6em;
-
-    }
-
-    .dropdown-img {
+    @media only screen and (min-width: 930px) {
         max-height: 6em;
         min-height: 3em;
-        float: right;
-        margin-top: -6em;
-        margin-right: 1em;
-        transition: all .6s ease;
+        cursor: pointer;
+    }
+}
+
+.label-search-input {
+    padding-left: 1.6em;
+
+}
+
+.dropdown-img {
+    max-height: 6em;
+    min-height: 3em;
+    float: right;
+    margin-top: -6em;
+    margin-right: 1em;
+    transition: all .6s ease;
+
+    &:hover,
+    &:active,
+    &:focus {
+        rotate: 360deg;
+        filter: brightness(1.2);
+    }
+
+    @media only screen and (min-width: 930px) {
+        max-height: 8em;
+        min-height: 5em;
+        margin-top: -8em;
+        cursor: pointer;
+    }
+}
+
+.dropdown-menu {
+    position: relative;
+
+    /* Linkjes in dropdown */
+    a {
+        display: block;
+        color: var(--secondaryAccent);
+        padding: 10px 15px;
+        text-decoration: none;
+        transition: all .3s ease;
+
 
         &:hover,
         &:active,
         &:focus {
-            rotate: 360deg;
-            filter: brightness(1.2);
-        }
-
-        @media only screen and (min-width: 930px) {
-            max-height: 8em;
-            min-height: 5em;
-            margin-top: -8em;
-            cursor: pointer;
-        }
-    }
-
-    .dropdown-menu {
-        position: relative;
-
-        /* Linkjes in dropdown */
-        a {
-            display: block;
-            color: var(--secondaryAccent);
-            padding: 10px 15px;
-            text-decoration: none;
-            transition: all .3s ease;
-
-
-            &:hover,
-            &:active,
-            &:focus {
-                transform: translateX(5px);
-                color: var(--zee);
-                font-weight: var(--font-weight-semibold);
-                pointer-events: auto;
-                opacity: 1;
-                outline: none;
-            }
-        }
-
-        /* Hover op img opent dropdown */
-        &:hover .dropdown-items {
-            opacity: 1;
-            transform: translateY(0);
+            transform: translateX(5px);
+            color: var(--zee);
+            font-weight: var(--font-weight-semibold);
             pointer-events: auto;
-        }
-    }
-
-    .dropdown-items {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        min-width: 140px;
-        margin-top: 0.3em;
-
-        opacity: 0;
-        transform: translateY(-15px);
-        pointer-events: none;
-
-        background-color: var(--luchtBlauw);
-        box-shadow: 0 0.2em 0.3em var(--secondaryAccent);
-        border-radius: 1em;
-
-        transition:
-            opacity .25s ease,
-            transform .25s ease;
-
-        padding: 6px 0;
-
-        border: solid var(--paarsBlauw) 0.2em;
-        border-radius: 1.2em;
-
-        &:focus-within {
             opacity: 1;
+            outline: none;
         }
-
     }
+
+    /* Hover op img opent dropdown */
+    &:hover .dropdown-items {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+.dropdown-items {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    min-width: 140px;
+    margin-top: 0.3em;
+
+    opacity: 0;
+    transform: translateY(-15px);
+    pointer-events: none;
+
+    background-color: var(--luchtBlauw);
+    box-shadow: 0 0.2em 0.3em var(--secondaryAccent);
+    border-radius: 1em;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+    padding: 6px 0;
+
+    border: solid var(--paarsBlauw) 0.2em;
+    border-radius: 1.2em;
+
+    &:focus-within {
+        opacity: 1;
+    }
+
 }
 
 .news-title {
